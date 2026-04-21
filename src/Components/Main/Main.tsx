@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import calculateTimer from "../../Helper/CalculateTimer";
 import Controls from "../Controls/Controls";
-import "./Main.css";
+import "./main.css";
 
-function Main() {
-  const [timeInSeconds, setTimeInSeconds] = useState<number>(0); //defino el tipo
+const Main: React.FC = () => {
+  const [timeInCentiseconds, setTimeInCentiseconds] = useState<number>(0);
   const [timerArray, setTimerArray] = useState<Array<number | string>>([]);
 
   useEffect(() => {
-    let timeArray: Array<number | string> = calculateTimer(timeInSeconds);
+    let timeArray: Array<number | string> = calculateTimer(timeInCentiseconds);
     setTimerArray(timeArray);
-  }, [timeInSeconds]);
+  }, [timeInCentiseconds]);
 
   return (
     <main>
@@ -20,8 +20,10 @@ function Main() {
         <p className="timer-text">{timerArray[1]}</p>
         <span>:</span>
         <p className="timer-text">{timerArray[2]}</p>
+        <span>:</span>
+        <p className="timer-text">{timerArray[3]}</p>
       </section>
-      <Controls setTimeInSeconds={setTimeInSeconds} />
+      <Controls setTimeInCentiseconds={setTimeInCentiseconds} />
     </main>
   );
 }

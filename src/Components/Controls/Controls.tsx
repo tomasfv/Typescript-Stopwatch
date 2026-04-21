@@ -1,31 +1,31 @@
 import React, { useState } from "react";
-import "./Controls.css";
+import "./controls.css";
 
 type Props = {
-  setTimeInSeconds: Function;
+  setTimeInCentiseconds: React.Dispatch<React.SetStateAction<number>>;
 };
 
-function Controls(props: Props) {
-  const { setTimeInSeconds } = props;
+const Controls: React.FC<Props> = (props: Props) => {
+  const { setTimeInCentiseconds } = props;
   const [intervalId, setIntervalId] = useState<number>(0);
   const [playButton, setPlayButton] = useState<boolean>(false);
 
   const handlePlayButton = () => {
-    let interval: any = setInterval(() => {
-      setTimeInSeconds((previousState: number) => previousState + 1);
-    }, 1000);
+    const interval = window.setInterval(() => {
+      setTimeInCentiseconds((previousState: number) => previousState + 1);
+    }, 10);
 
     setIntervalId(interval);
     setPlayButton(true);
   };
 
   const handleStopButton = () => {
-    clearInterval(intervalId);
+    window.clearInterval(intervalId);
     setPlayButton(false);
   };
   const handleResetButton = () => {
-    clearInterval(intervalId);
-    setTimeInSeconds(0);
+    window.clearInterval(intervalId);
+    setTimeInCentiseconds(0);
     setPlayButton(false);
   };
 
