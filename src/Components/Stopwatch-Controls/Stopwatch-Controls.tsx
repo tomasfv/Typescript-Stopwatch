@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import "./controls.css";
+import "./stopwatch-controls.css";
 
 type Props = {
   setTimeInCentiseconds: React.Dispatch<React.SetStateAction<number>>;
 };
 
-const Controls: React.FC<Props> = (props: Props) => {
+const StopwatchControls: React.FC<Props> = (props: Props) => {
   const { setTimeInCentiseconds } = props;
   const [intervalId, setIntervalId] = useState<number>(0);
   const [playButton, setPlayButton] = useState<boolean>(false);
@@ -42,4 +42,4 @@ const Controls: React.FC<Props> = (props: Props) => {
   );
 }
 
-export default Controls;
+export default StopwatchControls;

@@ -1,30 +1,39 @@
-import React, { useState, useEffect } from "react";
-import calculateTimer from "../../Helper/CalculateTimer";
-import Controls from "../Controls/Controls";
+import React from "react";
+import StopwatchDisplay from "../Stopwatch-Display/Stopwatch-Display";
 import "./main.css";
 
 const Main: React.FC = () => {
-  const [timeInCentiseconds, setTimeInCentiseconds] = useState<number>(0);
-  const [timerArray, setTimerArray] = useState<Array<number | string>>([]);
-
-  useEffect(() => {
-    let timeArray: Array<number | string> = calculateTimer(timeInCentiseconds);
-    setTimerArray(timeArray);
-  }, [timeInCentiseconds]);
 
   return (
-    <main>
-      <section className="time-container">
-        <p className="timer-text">{timerArray[0]}</p>
-        <span>:</span>
-        <p className="timer-text">{timerArray[1]}</p>
-        <span>:</span>
-        <p className="timer-text">{timerArray[2]}</p>
-        <span>:</span>
-        <p className="timer-text">{timerArray[3]}</p>
-      </section>
-      <Controls setTimeInCentiseconds={setTimeInCentiseconds} />
-    </main>
+    <div className="main-container">
+      <div className="div1">
+        <StopwatchDisplay />
+      </div>
+      <div className="div2">
+        <StopwatchDisplay />
+      </div>
+      <div className="div3">
+        <StopwatchDisplay />
+      </div>
+      <div className="div4">
+        <StopwatchDisplay />
+      </div>
+      <div className="div5">
+        <StopwatchDisplay />
+      </div>
+      <div className="div6">
+        <StopwatchDisplay />
+      </div>
+      <div className="div7">
+        <StopwatchDisplay />
+      </div>
+      <div className="div8">
+        <StopwatchDisplay />
+      </div>
+      <div className="div9">
+        <StopwatchDisplay />
+      </div>
+    </div>
   );
 }
 
