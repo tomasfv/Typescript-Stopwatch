@@ -33,3 +33,11 @@
     cursor: pointer;
     font-weight: bolder;
 }
+
+.counter-buttons button:hover {
+    background-color: #d69d2e;
+}
+
+.counter-buttons button:active {
+    background-color: #c17e0f;
+}

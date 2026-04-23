@@ -8,3 +8,11 @@
   cursor: pointer;
   font-weight: bolder;
 }
+
+.controls-container button:hover {
+  background-color: #d69d2e;
+}
+
+.controls-container button:active {
+  background-color: #c17e0f;
+}

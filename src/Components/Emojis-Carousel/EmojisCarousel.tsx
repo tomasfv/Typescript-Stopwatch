@@ -4,7 +4,8 @@ import './emojis-carousel.css'
 interface Emoji {
     name: string;
     unicode: string[];
-    htmlCode: string[]
+    htmlCode: string[];
+    category: string;
 }
 
 const EmojisCarousel: React.FC = () => {
@@ -14,7 +15,8 @@ const EmojisCarousel: React.FC = () => {
     const getEmojis = async () => {
         const response = await fetch("https://emojihub.yurace.pro/api/all");
         const data = await response.json();
-        setEmojis(data);
+        const faceEmojis = data.filter((emoji: Emoji) => emoji.category === "smileys and people")
+        setEmojis(faceEmojis);
     }
 
     useEffect(() => {
@@ -50,7 +52,7 @@ const EmojisCarousel: React.FC = () => {
                 {emojis.length > 0 && (
                     <div className="emojis-display">
                         <span dangerouslySetInnerHTML={{ __html: emojis[emojiIndex].htmlCode[0] }}></span>
-                        <p>{handleEmojiSearch(emojis[emojiIndex].name)}</p>
+                        <h3>{handleEmojiSearch(emojis[emojiIndex].name)}</h3>
                     </div>
                 )
                 }

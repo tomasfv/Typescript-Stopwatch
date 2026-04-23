@@ -1,6 +1,6 @@
 .main-container {
   margin: 0px;
-  background-color: #282c34;
+  background: linear-gradient(#15171b, #122b5c);
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
