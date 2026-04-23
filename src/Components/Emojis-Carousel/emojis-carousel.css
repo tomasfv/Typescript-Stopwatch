@@ -1,0 +1,40 @@
+.emojis-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    max-height: 247px;
+    min-height: 246px;
+}
+
+.emojis-display {
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    font-size: 2rem;
+}
+
+.emojis-display p {
+    margin: 0;
+}
+
+.emojis-buttons button {
+    margin: 15px;
+    margin-top: 36px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e5ad3d;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bolder;
+}

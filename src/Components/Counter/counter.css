@@ -1,0 +1,35 @@
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    margin: 20px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    max-height: 247px;
+}
+
+.counter-display {
+    color: #ccc;
+    display: flex;
+    letter-spacing: 2px;
+    font-size: 5rem;
+}
+
+.counter-display p {
+    margin: 0;
+}
+
+.counter-buttons button {
+    margin: 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e5ad3d;
+    padding: 16px 32px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    font-weight: bolder;
+}

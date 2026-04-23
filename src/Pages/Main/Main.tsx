@@ -1,5 +1,7 @@
 import React from "react";
-import StopwatchDisplay from "../Stopwatch-Display/Stopwatch-Display";
+import StopwatchDisplay from "../../Components/Stopwatch-Display/Stopwatch-Display";
+import Counter from "../../Components/Counter/Counter";
+import EmojisCarousel from "../../Components/Emojis-Carousel/EmojisCarousel";
 import "./main.css";
 
 const Main: React.FC = () => {
@@ -10,28 +12,28 @@ const Main: React.FC = () => {
         <StopwatchDisplay />
       </div>
       <div className="div2">
-        <StopwatchDisplay />
+        <Counter />
       </div>
       <div className="div3">
-        <StopwatchDisplay />
+        <EmojisCarousel />
       </div>
       <div className="div4">
         <StopwatchDisplay />
       </div>
       <div className="div5">
-        <StopwatchDisplay />
+        <Counter />
       </div>
       <div className="div6">
-        <StopwatchDisplay />
+        <EmojisCarousel />
       </div>
       <div className="div7">
         <StopwatchDisplay />
       </div>
       <div className="div8">
-        <StopwatchDisplay />
+        <Counter />
       </div>
       <div className="div9">
-        <StopwatchDisplay />
+        <EmojisCarousel />
       </div>
     </div>
   );

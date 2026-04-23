@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import calculateTimer from "../../Helper/CalculateTimer";
+import calculateTimer from "../../Helpers/CalculateTimer";
 import StopwatchControls from "../Stopwatch-Controls/Stopwatch-Controls";
 import "./stopwatch-display.css";
 
